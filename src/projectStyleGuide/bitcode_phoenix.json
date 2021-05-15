@@ -1,5 +1,6 @@
 {
   "projectInfo": {
+    "color": "#FF357B",
     "company": "Bitcode",
     "name": "Project Phoenix"
   },
@@ -54,7 +55,6 @@
       { "color": "#FC9603", "type": "Secondary" },
       { "color": "#F22764", "type": "Tertiary" },
       { "color": "#ABABAB", "type": "Disabled" },
-      { "color": "#FC9603", "type": "Secondary" },
       { "color": "#C0C4CC", "type": "Divider" }
     ],
     "typographies": [

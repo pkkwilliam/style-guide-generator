@@ -15,12 +15,12 @@ export default function StyleGuide(props) {
 }
 
 export function ProjectInfo({ projectInfo }) {
-  const { company, name } = projectInfo;
+  const { color, company, name } = projectInfo;
   const { projectInfoHeader } = styles;
   return (
     <View style={styles.projectInfoContainer}>
-      <Text style={projectInfoHeader}>{name}</Text>
-      <Text style={projectInfoHeader}>{company}</Text>
+      <Text style={{ color: color, ...projectInfoHeader }}>{name}</Text>
+      <Text style={{ color: color, ...projectInfoHeader }}>{company}</Text>
     </View>
   );
 }
@@ -87,15 +87,20 @@ export function StyleButtons({ buttons }) {
         </button>
         <View style={{ flexDirection: "column", marginLeft: 18 }}>
           <Text style={{ fontWeight: 600 }}>{type}</Text>
-          <Text style={{ marginTop: 8 }}>Background: {background}</Text>
-          <Text style={{ marginTop: 8 }}>Color: {color}</Text>
-          <Text style={{ marginTop: 8 }}>BorderRadius: {borderRadius}</Text>
-          <Text style={{ marginTop: 8 }}>Font Weight: {fontWeight}</Text>
+          <TextField fieldName="Background">{background}</TextField>
+          <TextField fieldName="Color">{color}</TextField>
+          <TextField fieldName="Border Color">{borderColor}</TextField>
+          <TextField fieldName="Border Radius">{borderRadius}</TextField>
+          <TextField fieldName="Font Weight">{fontWeight}</TextField>
         </View>
       </View>
     );
   });
-  return <StyleSection header="Buttons">{Buttons}</StyleSection>;
+  return (
+    <StyleSection header="Buttons">
+      {breakIntoSeparateLine(Buttons, 3)}
+    </StyleSection>
+  );
 }
 
 export function StyleColors({ colors }) {
@@ -121,7 +126,11 @@ export function StyleColors({ colors }) {
       </View>
     );
   });
-  return <StyleSection header="Colors">{Colors}</StyleSection>;
+  return (
+    <StyleSection header="Colors">
+      {breakIntoSeparateLine(Colors, 4)}
+    </StyleSection>
+  );
 }
 
 export function StyleTypographies({ typographies }) {
@@ -129,11 +138,13 @@ export function StyleTypographies({ typographies }) {
     const { color, fontSize, fontWeight, type } = typography;
     return (
       <View style={{ marginBottom: 20 }}>
-        <View style={{ alignItems: "center", flexDirection: "row" }}>
+        <View style={{ flexDirection: "column" }}>
           <Text style={{ ...typography }}>{type}</Text>
-          <Text style={{ marginLeft: 8 }}>Color: {color}</Text>
-          <Text style={{ marginLeft: 8 }}>Font Size: {fontSize}</Text>
-          <Text style={{ marginLeft: 8 }}>Font Weight: {fontWeight}</Text>
+          <View>
+            <TextField fieldName="Color">{color}</TextField>
+            <TextField fieldName="Font Size">{fontSize}</TextField>
+            <TextField fieldName="Font Weight">{fontWeight}</TextField>
+          </View>
         </View>
       </View>
     );
@@ -156,6 +167,36 @@ function StyleSection({ children, header }) {
   );
 }
 
+function TextField({ children, fieldName }) {
+  return (
+    <View style={{ marginRight: 8 }}>
+      <Text style={{ fontWeight: 600 }}>{`${fieldName}: `}</Text>
+      <Text>{children}</Text>
+    </View>
+  );
+}
+
+function breakIntoSeparateLine(components, componentPerLine) {
+  let result = [];
+  let currentLine = [];
+  const pushIntoResult = (components) => {
+    result.push(<tr>{components}</tr>);
+  };
+  components.forEach((component, index) => {
+    currentLine.push(<td>{component}</td>);
+    if (currentLine.length === componentPerLine) {
+      pushIntoResult(currentLine);
+      currentLine = [];
+    }
+  });
+  pushIntoResult(currentLine);
+  return (
+    <table style={{ borderCollapse: "separate", borderSpacing: "0 1em" }}>
+      {result}
+    </table>
+  );
+}
+
 const styles = {
   container: {
     backgroundColor: "#EFEFEF",
@@ -169,7 +210,6 @@ const styles = {
     padding: 50,
   },
   projectInfoHeader: {
-    color: "#FF357B",
     fontSize: 38,
     fontWeight: 900,
   },

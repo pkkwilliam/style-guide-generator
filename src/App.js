@@ -13,6 +13,6 @@ export default function App() {
 
 const styles = {
   container: {
-    height: "100vh",
+    height: "100%",
   },
 };
