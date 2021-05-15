@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/style-guide-generator/static/css/main.b3e14c2f.chunk.css",
+    "main.js": "/style-guide-generator/static/js/main.048235b2.chunk.js",
+    "main.js.map": "/style-guide-generator/static/js/main.048235b2.chunk.js.map",
+    "runtime-main.js": "/style-guide-generator/static/js/runtime-main.a1c4d4af.js",
+    "runtime-main.js.map": "/style-guide-generator/static/js/runtime-main.a1c4d4af.js.map",
+    "static/js/2.af4bf71a.chunk.js": "/style-guide-generator/static/js/2.af4bf71a.chunk.js",
+    "static/js/2.af4bf71a.chunk.js.map": "/style-guide-generator/static/js/2.af4bf71a.chunk.js.map",
+    "static/js/3.0c0732e2.chunk.js": "/style-guide-generator/static/js/3.0c0732e2.chunk.js",
+    "static/js/3.0c0732e2.chunk.js.map": "/style-guide-generator/static/js/3.0c0732e2.chunk.js.map",
+    "index.html": "/style-guide-generator/index.html",
+    "static/css/main.b3e14c2f.chunk.css.map": "/style-guide-generator/static/css/main.b3e14c2f.chunk.css.map",
+    "static/js/2.af4bf71a.chunk.js.LICENSE.txt": "/style-guide-generator/static/js/2.af4bf71a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a1c4d4af.js",
+    "static/js/2.af4bf71a.chunk.js",
+    "static/css/main.b3e14c2f.chunk.css",
+    "static/js/main.048235b2.chunk.js"
+  ]
+}
