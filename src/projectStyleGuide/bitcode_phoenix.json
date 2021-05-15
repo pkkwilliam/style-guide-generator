@@ -1,0 +1,32 @@
+{
+  "projectInfo": {
+    "company": "Bitcode",
+    "name": "Project Phoenix"
+  },
+  "style": {
+    "backgrounds": [
+      { "color": "#FFFFFF", "type": "Primary" },
+      { "color": "#8F8F8F", "type": "Secondary" }
+    ],
+    "buttons": [
+      { "type": "Primary Button" },
+      { "type": "Secondary Button" },
+      { "type": "Text Button" },
+      { "type": "Link Button" }
+    ],
+    "colors": [
+      { "color": "#FDE814", "type": "Primary" },
+      { "color": "#FC9603", "type": "Secondary" },
+      { "color": "#F22764", "type": "Tertiary" },
+      { "color": "#ABABAB", "type": "Disabled" },
+      { "color": "#FC9603", "type": "Secondary" },
+      { "color": "#C0C4CC", "type": "Divider" }
+    ],
+    "typographies": [
+      { "type": "Header Large" },
+      { "type": "Header Small" },
+      { "type": "Body Text" },
+      { "type": "Caption" }
+    ]
+  }
+}

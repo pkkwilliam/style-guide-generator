@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import StyleGuide from "./components/styleGuide/styleGuide";
+import Bitcode_Phoenix from "./projectStyleGuide/bitcode_phoenix.json";
 
-function App() {
+import "./App.css";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={styles.container}>
+      <StyleGuide projectStyleGuide={Bitcode_Phoenix} />
     </div>
   );
 }
 
-export default App;
+const styles = {
+  container: {
+    height: "100vh",
+  },
+};
