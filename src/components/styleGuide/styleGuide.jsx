@@ -64,7 +64,38 @@ export function StyleBackgrounds({ backgrounds }) {
 }
 
 export function StyleButtons({ buttons }) {
-  return <StyleSection header="Buttons"></StyleSection>;
+  const Buttons = buttons.map((button) => {
+    const { background, borderColor, borderRadius, color, fontWeight, type } =
+      button;
+    return (
+      <View style={{ marginRight: 38 }}>
+        <button
+          style={{
+            background: background,
+            border: "solid",
+            borderColor: borderColor,
+            borderRadius: borderRadius,
+            borderWidth: 1,
+            color: color,
+            fontWeight: fontWeight,
+            height: 50,
+            width: 150,
+            ...button,
+          }}
+        >
+          <Text style={{ fontSize: 16 }}>{type}</Text>
+        </button>
+        <View style={{ flexDirection: "column", marginLeft: 18 }}>
+          <Text style={{ fontWeight: 600 }}>{type}</Text>
+          <Text style={{ marginTop: 8 }}>Background: {background}</Text>
+          <Text style={{ marginTop: 8 }}>Color: {color}</Text>
+          <Text style={{ marginTop: 8 }}>BorderRadius: {borderRadius}</Text>
+          <Text style={{ marginTop: 8 }}>Font Weight: {fontWeight}</Text>
+        </View>
+      </View>
+    );
+  });
+  return <StyleSection header="Buttons">{Buttons}</StyleSection>;
 }
 
 export function StyleColors({ colors }) {
@@ -94,7 +125,24 @@ export function StyleColors({ colors }) {
 }
 
 export function StyleTypographies({ typographies }) {
-  return <StyleSection header="Typographies"></StyleSection>;
+  const Typography = typographies.map((typography) => {
+    const { color, fontSize, fontWeight, type } = typography;
+    return (
+      <View style={{ marginBottom: 20 }}>
+        <View style={{ alignItems: "center", flexDirection: "row" }}>
+          <Text style={{ ...typography }}>{type}</Text>
+          <Text style={{ marginLeft: 8 }}>Color: {color}</Text>
+          <Text style={{ marginLeft: 8 }}>Font Size: {fontSize}</Text>
+          <Text style={{ marginLeft: 8 }}>Font Weight: {fontWeight}</Text>
+        </View>
+      </View>
+    );
+  });
+  return (
+    <StyleSection header="Typographies">
+      <View style={{ flexDirection: "column" }}>{Typography}</View>
+    </StyleSection>
+  );
 }
 
 function StyleSection({ children, header }) {

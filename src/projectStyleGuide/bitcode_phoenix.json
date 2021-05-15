@@ -9,10 +9,45 @@
       { "color": "#8F8F8F", "type": "Secondary" }
     ],
     "buttons": [
-      { "type": "Primary Button" },
-      { "type": "Secondary Button" },
-      { "type": "Text Button" },
-      { "type": "Link Button" }
+      {
+        "background": "#FDE814",
+        "borderColor": "#FDE814",
+        "borderRadius": 30,
+        "color": "#000000",
+        "fontWeight": "600",
+        "type": "Primary Button"
+      },
+      {
+        "background": "#FC9603",
+        "borderColor": "#FC9603",
+        "borderRadius": 30,
+        "color": "#FFFFFF",
+        "fontWeight": "600",
+        "type": "Secondary Button"
+      },
+      {
+        "background": "linear-gradient(90deg,#fc9603 0%,rgba(242, 39, 100, 1) 100%)",
+        "borderColor": "linear-gradient(90deg,#fc9603 0%,rgba(242, 39, 100, 1) 100%)",
+        "borderRadius": 30,
+        "color": "#FFFFFF",
+        "fontWeight": "600",
+        "type": "Gradient Button"
+      },
+      {
+        "border": "none",
+        "background": "white",
+        "color": "#33ccff",
+        "fontWeight": "300",
+        "textDecoration": "underline",
+        "type": "Link Button"
+      },
+      {
+        "border": "none",
+        "background": "white",
+        "color": "#FC9603",
+        "fontWeight": "300",
+        "type": "Text Button"
+      }
     ],
     "colors": [
       { "color": "#FDE814", "type": "Primary" },
@@ -23,10 +58,30 @@
       { "color": "#C0C4CC", "type": "Divider" }
     ],
     "typographies": [
-      { "type": "Header Large" },
-      { "type": "Header Small" },
-      { "type": "Body Text" },
-      { "type": "Caption" }
+      {
+        "color": "#333333",
+        "fontSize": 22,
+        "fontWeight": "600",
+        "type": "Header Large"
+      },
+      {
+        "color": "#333333",
+        "fontSize": 18,
+        "fontWeight": "600",
+        "type": "Header Small"
+      },
+      {
+        "color": "#333333",
+        "fontSize": 16,
+        "fontWeight": "300",
+        "type": "Body Text"
+      },
+      {
+        "color": "#ABABAB",
+        "fontSize": 16,
+        "fontWeight": "300",
+        "type": "Caption"
+      }
     ]
   }
 }
