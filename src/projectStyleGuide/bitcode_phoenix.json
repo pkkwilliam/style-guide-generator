@@ -7,7 +7,7 @@
   "style": {
     "backgrounds": [
       { "color": "#FFFFFF", "type": "Primary" },
-      { "color": "#8F8F8F", "type": "Secondary" }
+      { "color": "#F8F8F8", "type": "Secondary" }
     ],
     "buttons": [
       {
@@ -15,7 +15,8 @@
         "borderColor": "#FDE814",
         "borderRadius": 30,
         "color": "#000000",
-        "fontWeight": "600",
+        "fontSize": 16,
+        "fontWeight": "400",
         "type": "Primary Button"
       },
       {
@@ -23,6 +24,7 @@
         "borderColor": "#FC9603",
         "borderRadius": 30,
         "color": "#FFFFFF",
+        "fontSize": 16,
         "fontWeight": "600",
         "type": "Secondary Button"
       },
@@ -31,23 +33,42 @@
         "borderColor": "linear-gradient(90deg,#fc9603 0%,rgba(242, 39, 100, 1) 100%)",
         "borderRadius": 30,
         "color": "#FFFFFF",
+        "fontSize": 16,
         "fontWeight": "600",
         "type": "Gradient Button"
       },
       {
         "border": "none",
         "background": "white",
-        "color": "#33ccff",
+        "color": "#1fb4ed",
         "fontWeight": "300",
+        "fontSize": 16,
         "textDecoration": "underline",
         "type": "Link Button"
       },
       {
         "border": "none",
         "background": "white",
-        "color": "#FC9603",
-        "fontWeight": "300",
+        "color": "#1fb4ed",
+        "fontSize": 18,
+        "fontWeight": "500",
         "type": "Text Button"
+      },
+      {
+        "border": "none",
+        "background": "white",
+        "color": "#1fb4ed",
+        "fontSize": 16,
+        "fontWeight": "300",
+        "type": "Text Button Small"
+      },
+      {
+        "border": "none",
+        "background": "white",
+        "color": "#D9534F",
+        "fontSize": 14,
+        "fontWeight": "500",
+        "type": "Text Button - Danger"
       }
     ],
     "colors": [
@@ -55,32 +76,39 @@
       { "color": "#FC9603", "type": "Secondary" },
       { "color": "#F22764", "type": "Tertiary" },
       { "color": "#ABABAB", "type": "Disabled" },
-      { "color": "#C0C4CC", "type": "Divider" }
+      { "color": "#C0C4CC", "type": "Divider" },
+      { "color": "#D9534F", "type": "Danger" }
     ],
     "typographies": [
       {
         "color": "#333333",
-        "fontSize": 22,
+        "fontSize": 20,
         "fontWeight": "600",
-        "type": "Header Large"
+        "type": "Header"
       },
       {
         "color": "#333333",
-        "fontSize": 18,
+        "fontSize": 16,
         "fontWeight": "600",
         "type": "Header Small"
       },
       {
         "color": "#333333",
-        "fontSize": 16,
-        "fontWeight": "300",
+        "fontSize": 14,
+        "fontWeight": "350",
         "type": "Body Text"
       },
       {
         "color": "#ABABAB",
-        "fontSize": 16,
-        "fontWeight": "300",
+        "fontSize": 14,
+        "fontWeight": "350",
         "type": "Caption"
+      },
+      {
+        "color": "#ABABAB",
+        "fontSize": 12,
+        "fontWeight": "350",
+        "type": "Caption Small"
       }
     ]
   }

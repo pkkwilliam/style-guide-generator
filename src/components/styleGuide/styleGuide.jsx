@@ -65,8 +65,15 @@ export function StyleBackgrounds({ backgrounds }) {
 
 export function StyleButtons({ buttons }) {
   const Buttons = buttons.map((button) => {
-    const { background, borderColor, borderRadius, color, fontWeight, type } =
-      button;
+    const {
+      background,
+      borderColor,
+      borderRadius,
+      color,
+      fontSize = 16,
+      fontWeight,
+      type,
+    } = button;
     return (
       <View style={{ marginRight: 38 }}>
         <button
@@ -77,13 +84,14 @@ export function StyleButtons({ buttons }) {
             borderRadius: borderRadius,
             borderWidth: 1,
             color: color,
+            fontSize: fontSize,
             fontWeight: fontWeight,
             height: 50,
             width: 150,
             ...button,
           }}
         >
-          <Text style={{ fontSize: 16 }}>{type}</Text>
+          <Text>{type}</Text>
         </button>
         <View style={{ flexDirection: "column", marginLeft: 18 }}>
           <Text style={{ fontWeight: 600 }}>{type}</Text>
@@ -91,6 +99,7 @@ export function StyleButtons({ buttons }) {
           <TextField fieldName="Color">{color}</TextField>
           <TextField fieldName="Border Color">{borderColor}</TextField>
           <TextField fieldName="Border Radius">{borderRadius}</TextField>
+          <TextField fieldName="Font Size">{fontSize}</TextField>
           <TextField fieldName="Font Weight">{fontWeight}</TextField>
         </View>
       </View>
@@ -216,11 +225,11 @@ const styles = {
   styleContainer: {
     backgroundColor: "#FFFFFF",
     flexDirection: "column",
-    padding: "30px 30px",
+    padding: 50,
   },
   styleSectionContainer: {
     flexDirection: "column",
-    marginTop: 80,
+    marginTop: 30,
   },
   styleSectionHeader: {
     color: "#767676",
